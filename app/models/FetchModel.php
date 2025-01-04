@@ -14,7 +14,8 @@ class FetchModel
         $this->db = $db;
     }
 
-    //Gigachad boomerang class $œ(' 3 ')œ$
+    //Gigachad boomerang class $œ(' 3 ')œ$ 
+    // Dude don't be silly 😭😭
     public function boomerang($query, $fetchMode)
     {
         $DBH = $this->db;
@@ -24,7 +25,7 @@ class FetchModel
         $STH->setFetchMode($fetchMode);
 
         $results = array();
-        while ($row = $STH->fetch()) {
+        while ($row = $STH->fetch(PDO::FETCH_ASSOC)) {
             $results[] = $row;
         }
         $STH->closeCursor();

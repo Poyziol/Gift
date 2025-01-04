@@ -10,7 +10,7 @@
 
             <div class="col-md-6 col-lg-7 border border-5 border-dark container small-div-2">
                  <!-- send to /login/check-admin on routes.php -->
-                <form action="/login/check-admin" method="post">
+                <form action="/login/check-admin" method="POST">
 
                     <h3>Gift Control</h3>
 
@@ -26,16 +26,16 @@
                         <?php endif; ?>
 
                         <div class="form-floating mb-3 mt-3">
-                            <input type="text" class="form-control" name="username" placeholder="Enter name" id="username-input">
+                            <input type="text" class="form-control" name="username" placeholder="Enter name" id="username-input" value="Bob">
                             <label for="username-input">Username</label>
                         </div>
 
                         <div class="form-floating mb-3 mt-3">
-                            <input type="password" class="form-control" name="password" placeholder="Enter password" id="password-input">
+                            <input type="password" class="form-control" name="password" placeholder="Enter password" id="password-input" value="securePass">
                             <label for="password-input">Password</label>
                         </div>
 
-                        <button type="button" class="btn btn-primary button-1">Log in</button>
+                        <button class="btn btn-primary button-1">Log in</button>
                         
                     </div>
 
@@ -43,7 +43,7 @@
 
                     <div class="container">
                         <a href="#">Don t have an account?</a>
-                        <button type="button" class="btn btn-outline-success">Create New</button>
+                        <button class="btn btn-outline-success">Create New</button>
                     </div>
 
                 </form>
