@@ -1,0 +1,26 @@
+.gradient-bg {
+    background: linear-gradient(135deg, var(--primary-red), var(--secondary-red), var(--secondary-green));
+    background-size: 200% 200%;
+    animation: gradientAnimation 6s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ---------------------------
+   Admin login
+--------------------------- */
+.gradient-bg-special {
+    background: linear-gradient(to bottom right, #ff416c, #ff4b2b);
+}

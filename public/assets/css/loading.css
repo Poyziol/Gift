@@ -1,0 +1,107 @@
+.christmas-spinner {
+    position: fixed; /* Fix to the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+/* Snowflakes Background */
+.snowflake {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowflakeFall 5s linear infinite;
+    /* Random horizontal position */
+    left: calc(100% * var(--random-position));
+    animation-delay: 0s;  /* Make the animation start INSTANTLY */
+}
+
+/* Different snowflakes with different animation timings */
+.snowflake-1 {
+    --random-position: 0.1;
+    animation-duration: 5s;
+}
+
+.snowflake-2 {
+    --random-position: 0.2;
+    animation-duration: 5.5s;
+}
+
+.snowflake-3 {
+    --random-position: 0.3;
+    animation-duration: 6s;
+}
+
+.snowflake-4 {
+    --random-position: 0.4;
+    animation-duration: 5.2s;
+}
+
+.snowflake-5 {
+    --random-position: 0.5;
+    animation-duration: 6.2s;
+}
+
+/* Snowflake Falling Animation */
+@keyframes snowflakeFall {
+    0% {
+        transform: translateY(-50px) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(300px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Loading Text Style */
+.loading-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); 
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+
+/* Glowing Effect for the Text */
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff6666, 0 0 50px #ff6666;
+    }
+    100% {
+        text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ff9966, 0 0 50px #ff9966;
+    }
+}
+
+/* Snowflakes Particle Effect */
+.snowflake::before {
+    content: '❄';
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.christmas-spinner .content {
+    text-align: center; 
+    z-index: 1;
+}

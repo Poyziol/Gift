@@ -1,0 +1,10 @@
+# vendor/
+.vscode/
+# app/config/config.php
+# composer.lock
+# .vagrant/
+# runway
+public/assets/img/*
+!public/assets/img/christmas
+!public/assets/img/gifts
+

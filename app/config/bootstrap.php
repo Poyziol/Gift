@@ -1,10 +1,13 @@
 <?php
 
+
 /*
  * This is the file called bootstrap who's job is to make sure that all the
  * required services, plugins, connections, etc. are loaded and ready to go
  * for every request made to the application.
  */
+session_start();
+
 $ds = DIRECTORY_SEPARATOR;
 require(__DIR__ . $ds . '..' . $ds . '..' . $ds . 'vendor' . $ds . 'autoload.php');
 if(file_exists(__DIR__. $ds . 'config.php') === false) {

@@ -26,3 +26,15 @@ use Tracy\Debugger;
 
 // Redis? This is where you'd set that up
 // $app->register('redis', Redis::class, [ $config['redis']['host'], $config['redis']['port'] ]);
+
+Flight::map('userModel', function () {
+    return new App\Models\UserModel(Flight::db()); // So we don't have to use/include everytime
+});
+
+Flight::map('giftModel', function () {
+    return new App\Models\GiftModel(Flight::db());
+});
+
+Flight::map('moveModel', function () {
+    return new App\Models\MoveModel(Flight::db());
+});
